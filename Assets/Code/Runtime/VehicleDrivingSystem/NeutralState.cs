@@ -6,7 +6,6 @@ namespace BabuDriver.VehicleDrivingSystem
     {
         public override void Handle(VehicleController vehicle)
         {
-            Debug.Log("Vehicle is in Neutral.");
         }
 
         public override void Accelerate(VehicleController vehicle, float input)
@@ -33,7 +32,6 @@ namespace BabuDriver.VehicleDrivingSystem
             }
             else
             {
-                Debug.Log("Cannot switch to Parking while moving.");
             }
         }
 

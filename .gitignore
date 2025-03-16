@@ -143,3 +143,4 @@ PackageBackups/
 # UWP builds
 /UWP/*
 .vsconfig
+/Assets/__Prototype

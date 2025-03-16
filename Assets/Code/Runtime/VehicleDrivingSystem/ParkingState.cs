@@ -5,7 +5,6 @@ namespace BabuDriver.VehicleDrivingSystem
     {
         public override void Handle(VehicleController vehicle)
         {
-            Debug.Log("Vehicle is in Park.");
             vehicle.currentGear = Gear.Park;
 
             // Set motor torque to zero when parked
