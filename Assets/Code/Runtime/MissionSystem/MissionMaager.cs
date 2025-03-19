@@ -8,7 +8,7 @@ namespace BabuDriver.MissionSystem
         public static MissionManager Instance;
 
         private Mission currentMission;
-        private List<Mission> availableMissions; // This list can hold all your available missions
+        public List<Mission> availableMissions; // This list can hold all your available missions
         private bool missionInProgress;
 
         void Awake()
@@ -26,8 +26,6 @@ namespace BabuDriver.MissionSystem
             missionInProgress = false;
 
             AddMission(new DeliveryMission("DeliveryMission"));
-
-            StartMission(availableMissions[0]);
         }
 
         void Update()

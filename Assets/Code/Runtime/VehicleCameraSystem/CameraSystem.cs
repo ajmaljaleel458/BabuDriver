@@ -7,16 +7,31 @@ namespace BabuDriver.VehicleCameraSystem
     {
         Orbital,
         Cockpit,
+        Lobby
         // You can add more modes later here
     }
 
     public class CameraSystem : MonoBehaviour
     {
-        public CameraMode currentMode = CameraMode.Orbital;
+        public static CameraSystem Instance;
+        public CameraMode currentMode = CameraMode.Lobby;
         //public Text cameraModeText; // UI text to display the current camera mode
         public GameObject orbitalCamObj; // Reference to the orbital camera
         public GameObject cockpitCamObj; // Reference to the cockpit camera
+        public GameObject lobbyCamObj;
         private CameraMode lastMode;
+
+        private void Awake()
+        {
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
 
         void Start()
         {
@@ -38,11 +53,12 @@ namespace BabuDriver.VehicleCameraSystem
             SetCameraMode(currentMode);
         }
 
-        private void SetCameraMode(CameraMode mode)
+        public void SetCameraMode(CameraMode mode)
         {
             // Disable all cameras
             orbitalCamObj.SetActive(false);
             cockpitCamObj.SetActive(false);
+            lobbyCamObj.SetActive(false);
 
             switch (mode)
             {
@@ -51,6 +67,9 @@ namespace BabuDriver.VehicleCameraSystem
                     break;
                 case CameraMode.Cockpit:
                     cockpitCamObj.SetActive(true);
+                    break;
+                case CameraMode.Lobby:
+                    lobbyCamObj.SetActive(true);
                     break;
             }
 

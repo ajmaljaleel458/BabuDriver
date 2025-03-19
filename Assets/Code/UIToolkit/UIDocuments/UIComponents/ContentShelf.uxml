@@ -1,0 +1,8 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:Template name="DailyReward" src="project://database/Assets/Code/UIToolkit/UIDocuments/UIComponents/DailyReward.uxml?fileID=9197481963319205126&amp;guid=aa73366537207374e85b6da9ca8e9e47&amp;type=3#DailyReward" />
+    <engine:Template name="WatchAd" src="project://database/Assets/Code/UIToolkit/UIDocuments/UIComponents/WatchAd.uxml?fileID=9197481963319205126&amp;guid=e390fd38635b3d94f8075426ae7412af&amp;type=3#WatchAd" />
+    <engine:VisualElement name="content-shelf-container" style="position: relative; margin-left: 20px; margin-right: 20px; margin-top: 20px;">
+        <engine:Instance template="DailyReward" />
+        <engine:Instance template="WatchAd" />
+    </engine:VisualElement>
+</engine:UXML>

@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Code/UIToolkit/Styles/LobbyStyles.uss?fileID=7433441132597879392&amp;guid=eb212f54fd45cb64ea8b8c79be5a4572&amp;type=3#LobbyStyles" />
+    <ui:VisualElement name="header" style="flex-grow: 0; height: 100px; flex-wrap: nowrap; flex-shrink: 0; position: relative;">
+        <ui:VisualElement name="header_controlls_container" style="flex-grow: 1; width: auto;">
+            <ui:Button name="goback_btn" class="controll_btn" style="background-image: resource(&apos;icons/arrow_back_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24&apos;); width: 10%; background-position-y: center 15%; background-size: 80% 80%;" />
+            <ui:Button text="Settings" name="settings-btn" class="controll_btn" style="background-image: resource(&apos;icons/settings_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24&apos;);" />
+            <ui:Button text="Privacy" name="privacy-btn" class="controll_btn" style="background-image: resource(&apos;icons/policy_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24&apos;);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="header_title_container" style="flex-grow: 1; justify-content: center;">
+            <ui:Label text="MAIN MENU" emoji-fallback-support="false" style="color: rgb(255, 255, 255); -unity-text-align: middle-center; font-size: 50px;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-items: stretch; align-content: flex-end; justify-content: flex-end;">
+            <ui:Label text="100000" style="align-self: center; justify-content: flex-start; align-items: stretch; font-size: 40px; color: rgb(255, 255, 255); -unity-text-align: middle-right; white-space: nowrap; flex-direction: column;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

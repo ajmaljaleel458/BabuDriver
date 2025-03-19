@@ -1,0 +1,49 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:Template name="Header" src="project://database/Assets/Code/UIToolkit/UIDocuments/UITemplates/Header.uxml?fileID=9197481963319205126&amp;guid=678ad4745eaf0a64992b584a1bc3167d&amp;type=3#Header" />
+    <engine:Template name="ContentShelf" src="project://database/Assets/Code/UIToolkit/UIDocuments/UIComponents/ContentShelf.uxml?fileID=9197481963319205126&amp;guid=2d741977899609348bfd5c04f326104a&amp;type=3#ContentShelf" />
+    <engine:Template name="StartButton" src="project://database/Assets/Code/UIToolkit/UIDocuments/UIComponents/StartButton.uxml?fileID=9197481963319205126&amp;guid=89ee60c0cc930654ca5653717e87179e&amp;type=3#StartButton" />
+    <Style src="project://database/Assets/Code/UIToolkit/Styles/LobbyStyles.uss?fileID=7433441132597879392&amp;guid=eb212f54fd45cb64ea8b8c79be5a4572&amp;type=3#LobbyStyles" />
+    <engine:VisualElement name="main-menu" enabled="true" style="flex-grow: 1; display: flex;">
+        <engine:Instance template="Header" />
+        <engine:VisualElement name="content-container" style="flex-grow: 1; position: relative; width: auto; flex-shrink: 1; flex-direction: column; justify-content: space-between; align-content: stretch;">
+            <engine:Instance template="ContentShelf" style="position: relative;" />
+            <engine:Button name="start-bitton" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; background-color: rgba(0, 0, 0, 0);">
+                <engine:Instance template="StartButton" name="TemplateContainer" style="flex-shrink: 0; align-items: stretch; align-content: flex-start; align-self: stretch;" />
+            </engine:Button>
+        </engine:VisualElement>
+    </engine:VisualElement>
+    <engine:VisualElement name="level-seletion" enabled="true" style="flex-grow: 1; width: 100%; height: 100%; display: none;">
+        <engine:Instance template="Header" />
+        <engine:VisualElement name="level-list" style="flex-grow: 1; left: auto; top: auto; height: 50%; width: 100%; flex-shrink: 0; background-color: rgba(82, 82, 82, 0.84);">
+            <engine:VisualElement name="mission-list-control" style="flex-grow: 1; flex-direction: row; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px;">
+                <engine:Button name="mission-" enable-rich-text="false" style="background-image: resource(&apos;icons/double_arrow_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24&apos;); background-color: rgba(0, 0, 0, 0); background-size: 150% 15%; width: 50px; rotate: 180deg; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+                <engine:VisualElement style="flex-grow: 1; flex-direction: row; padding-top: 40px; padding-bottom: 40px; padding-right: 40px; align-items: auto; justify-content: space-evenly;">
+                    <engine:VisualElement class="mission-primary-card" style="flex-grow: 0; background-color: rgb(255, 6, 6); padding-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; margin-left: 40px;">
+                        <engine:VisualElement class="mission-secondsry-card" style="flex-grow: 0; flex-direction: row; flex-shrink: 0; height: 100%; width: 100%;">
+                            <engine:Label text="LEVEL 0" class="mission-level" style="width: auto; height: auto;" />
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                    <engine:VisualElement class="mission-primary-card" style="flex-grow: 0; background-color: rgb(255, 6, 6); padding-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; margin-left: 40px; opacity: 1;">
+                        <engine:VisualElement class="mission-secondsry-card locked-mission" style="flex-grow: 0; flex-direction: row; flex-shrink: 0; height: 100%; width: 100%;">
+                            <engine:Label text="LEVEL 1" class="mission-level" style="width: auto; height: auto;" />
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                    <engine:VisualElement class="mission-primary-card locked-mission" style="flex-grow: 0; background-color: rgb(255, 6, 6); padding-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; margin-left: 40px;">
+                        <engine:VisualElement class="mission-secondsry-card locked-mission" style="flex-grow: 0; flex-direction: row; flex-shrink: 0; height: 100%; width: 100%;">
+                            <engine:Label text="LEVEL 2" class="mission-level" style="width: auto; height: auto;" />
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                    <engine:VisualElement class="mission-primary-card locked-mission" style="flex-grow: 0; background-color: rgb(255, 6, 6); padding-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; margin-left: 40px;">
+                        <engine:VisualElement class="mission-secondsry-card locked-mission" style="flex-grow: 0; flex-direction: row; flex-shrink: 0; height: 100%; width: 100%;">
+                            <engine:Label text="LEVEL 3" class="mission-level" style="width: auto; height: auto;" />
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+                <engine:Button style="background-image: resource(&apos;icons/double_arrow_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24&apos;); background-color: rgba(0, 0, 0, 0); width: 50px; background-size: 150% 80px; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+            </engine:VisualElement>
+            <engine:Instance template="StartButton" />
+        </engine:VisualElement>
+        <engine:VisualElement name="footer" style="flex-grow: 0; bottom: auto; height: 10%; top: 0; flex-shrink: 0; width: 100%; background-color: rgba(0, 0, 0, 0.75);" />
+    </engine:VisualElement>
+    <engine:VisualElement style="flex-grow: 1;" />
+</engine:UXML>

@@ -1,0 +1,9 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Code/UIToolkit/Styles/Components/DailyReward.uss?fileID=7433441132597879392&amp;guid=5e0822229a6361b4493eb9c4cab396eb&amp;type=3#DailyReward" />
+    <engine:VisualElement name="reward-container" class="reward-container" style="flex-direction: row; width: 450px; position: relative; flex-grow: 0; flex-wrap: nowrap; margin-top: 0; margin-right: 0; margin-bottom: 20px; margin-left: 0; flex-shrink: 1;">
+        <engine:Label name="reward-text" text="DAILY REWARD" class="reward-text" />
+        <engine:VisualElement name="radial-sun-burn-effect" class="gift-box" style="background-image: resource(&apos;icons/vecteezy_transparent-sun-ray-background-radial-beam-sunrise-or_46552152&apos;); -unity-background-image-tint-color: rgb(255, 255, 255); background-size: 100% 100%; background-color: rgba(51, 51, 51, 0.28); height: 210px; width: 254px; right: -105px; top: 53px;">
+            <engine:VisualElement style="flex-grow: 1; background-image: resource(&apos;icons/klipartz.com&apos;);" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

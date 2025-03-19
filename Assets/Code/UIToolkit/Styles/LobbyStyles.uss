@@ -1,0 +1,68 @@
+#header {
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    visibility: visible;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: auto;
+    top: 0;
+    flex-direction: row;
+}
+
+#header_controlls_container {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#header_title_container {
+    flex-direction: row;
+}
+
+.controll_btn {
+    background-image: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2346436936791262179&guid=bf0b0ba10fe82a44385a759d0c6ce854&type=3#console.infoicon");
+    background-size: 50% 50%;
+    background-position-y: top 15%;
+    background-position-x: center 0;
+    -unity-text-align: lower-left;
+    font-size: 20px;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.mission-primary-card {
+    background-image: resource('icons/Screenshot 2025-03-18 191414');
+    -unity-background-scale-mode: scale-and-crop;
+    height: 100%;
+    flex-shrink: 0;
+    width: 20%;
+}
+
+.mission-secondsry-card {
+    background-image: resource('icons/—Pngtree—grid black and white minimalist_13010206');
+    background-size: 115% 115%;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
+    flex-grow: 1;
+}
+
+.mission-level {
+    -unity-text-align: upper-left;
+    font-size: 45px;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    text-overflow: clip;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.locked-mission {
+    background-color: rgba(255, 255, 255, 0.24);
+}
