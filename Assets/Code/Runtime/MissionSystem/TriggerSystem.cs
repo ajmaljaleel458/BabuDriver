@@ -13,7 +13,7 @@ namespace BabuDriver.TriggerSystem
             }
             else if (other.CompareTag("BuyerBlip"))
             {
-                GameEventManager.TriggerEvent("CarParked", this.gameObject);
+                GameEventManager.TriggerEvent("DeleverProduct", this.gameObject);
             }
         }
         private void OnCollisionEnter(Collision collision)

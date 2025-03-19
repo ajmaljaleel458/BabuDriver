@@ -7,6 +7,8 @@ namespace BabuDriver.MissionSystem
     {
         public static MissionManager Instance;
 
+        public ObjectivePopupManager popupManager;
+
         private Mission currentMission;
         public List<Mission> availableMissions; // This list can hold all your available missions
         private bool missionInProgress;
@@ -25,7 +27,9 @@ namespace BabuDriver.MissionSystem
             availableMissions = new List<Mission>();
             missionInProgress = false;
 
-            AddMission(new DeliveryMission("DeliveryMission"));
+            //AddMission(new DeliveryMission("DeliveryMission", popupManager));
+
+            StartMission(new DeliveryMission("DeliveryMission", popupManager));
         }
 
         void Update()

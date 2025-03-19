@@ -6,14 +6,21 @@ namespace BabuDriver.MissionSystem.Missions
 {
     public sealed class ReachWarehouseObjective : Objective
     {
+        private ObjectivePopupManager objectivePopupManager;
+
+        public ReachWarehouseObjective(ObjectivePopupManager objectivePopupManager) 
+            => this.objectivePopupManager = objectivePopupManager;
+
         public override void StartObjective()
         {
             GameEventManager.Subscribe("WarehouseEntered", OnWarehouseEntered);
+            objectivePopupManager.PushObjectivePopup("Pick Up Product", "Go to Where House and pickup the product.");
         }
 
         private void OnWarehouseEntered(object eventData)
         {
             isEnded = true;
+            Debug.Log("Product Collected then delever to buyer!");
             EndObjective(true);
         }
 
@@ -34,16 +41,26 @@ namespace BabuDriver.MissionSystem.Missions
 
     public sealed class DeliverToBuyerObjective : Objective
     {
+        private ObjectivePopupManager objectivePopupManager;
+
+        public DeliverToBuyerObjective(ObjectivePopupManager objectivePopupManager)
+            => this.objectivePopupManager = objectivePopupManager;
         public override void StartObjective()
         {
+            GameEventManager.Subscribe("DeleverProduct", OnBuyerApproached);
+            objectivePopupManager.PushObjectivePopup("Deliver Product", "Go to buyer location and deliver.");
+        }
+
+        private void OnBuyerApproached(object eventData)
+        {
+            isEnded = true;
+            Debug.Log("Product Collected by the buyer.");
+            EndObjective(true);
         }
 
         public override void UpdateObjective()
         {
-            if (PlayerHasDeliveredToBuyer())
-            {
-                EndObjective(true);
-            }
+            
         }
 
         public override bool IsComplete() => isEnded;
@@ -52,12 +69,6 @@ namespace BabuDriver.MissionSystem.Missions
         {
             this.isEnded = isEnded;
         }
-
-        private bool PlayerHasDeliveredToBuyer()
-        {
-            // Implement logic to check if player has reached the buyer
-            return true; // Placeholder
-        }
     }
 
     public class DeliveryMission : Mission
@@ -65,13 +76,19 @@ namespace BabuDriver.MissionSystem.Missions
         private List<Objective> objectives = new List<Objective>();
         private int currentObjectiveIndex = 0;
 
-        public DeliveryMission(string name) => this.name = name;
+        private ObjectivePopupManager objectivePopupManager;
+
+        public DeliveryMission(string name, ObjectivePopupManager objectivePopupManager)
+        {
+            this.name = name;
+            this.objectivePopupManager = objectivePopupManager;
+        }
 
         public override void StartMission()
         {
 
-            objectives.Add(new ReachWarehouseObjective());
-            objectives.Add(new DeliverToBuyerObjective());
+            objectives.Add(new ReachWarehouseObjective(objectivePopupManager));
+            objectives.Add(new DeliverToBuyerObjective(objectivePopupManager));
 
             if (objectives.Count > 0)
             {

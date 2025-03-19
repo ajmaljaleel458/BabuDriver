@@ -1,0 +1,6 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="popup-box" style="flex-grow: 0; flex-shrink: 0; position: absolute; right: 0; top: 0; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; background-color: rgba(0, 0, 0, 0.79); margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px; border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; display: none;">
+        <engine:Label text="SAMPLE OBJECTIVE" name="title" style="color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 20px;" />
+        <engine:Label text="SDHDH SDHSDHS D S SDSDGSD SDGSJHGDG SSDGSJDG " name="discription" style="color: rgb(255, 255, 255); font-size: 20px;" />
+    </engine:VisualElement>
+</engine:UXML>

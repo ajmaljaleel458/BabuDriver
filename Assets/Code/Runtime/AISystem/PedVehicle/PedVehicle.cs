@@ -30,9 +30,6 @@ public class PedVehicle : MonoBehaviour
             Debug.LogError("NavMeshAgent component is missing!");
             return;
         }
-
-        // Move the vehicle to the next waypoint
-        MoveToNextWaypoint();
     }
 
     private void Update()
@@ -43,7 +40,7 @@ public class PedVehicle : MonoBehaviour
             vehicleAgent.destination = currentWayPoint.position;
 
             // Check if the vehicle has reached the current waypoint
-            if (Vector3.Distance(transform.position, currentWayPoint.position) < 0.1f)
+            if (Vector3.Distance(transform.position, currentWayPoint.position) < 0.5f)
             {
                 // Move to the next waypoint once the current one is reached
                 MoveToNextWaypoint();
