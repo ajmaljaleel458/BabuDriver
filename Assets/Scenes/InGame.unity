@@ -15744,7 +15744,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 395061278}
-  - component: {fileID: 395061279}
   m_Layer: 0
   m_Name: UI_MANAGER
   m_TagString: Untagged
@@ -15767,19 +15766,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 196246378}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &395061279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395061277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57e65ac94fad99743ba774ade330115a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uIDocument: {fileID: 744793562}
 --- !u!23 &398571327
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30248,6 +30234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 744793561}
   - component: {fileID: 744793562}
+  - component: {fileID: 744793563}
   m_Layer: 0
   m_Name: UIDocument
   m_TagString: Untagged
@@ -30284,11 +30271,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: 604198ff8d2be704080311ef4b58d539, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 421da2e5a413f214886c457153f42036, type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: a1c8e0e6e4298ba48afd4c02d26f8eb0, type: 3}
   m_SortingOrder: 0
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
   m_WorldSpaceHeight: 1080
+--- !u!114 &744793563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744793560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad3f1b4c879d99488fc1da37ee03c64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &746167286
 Transform:
   m_ObjectHideFlags: 0
@@ -79758,7 +79757,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d06dd425c10fefb44a7ecf4b032be97c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popupManager: {fileID: 395061279}
 --- !u!4 &1969448635
 Transform:
   m_ObjectHideFlags: 0

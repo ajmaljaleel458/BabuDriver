@@ -37,5 +37,7 @@ public class LobbyView : MonoBehaviour
     {
         HomeMenu.style.display = (menu == MenuModel.MenuType.Home) ? DisplayStyle.Flex : DisplayStyle.None;
         MissionMenu.style.display = (menu == MenuModel.MenuType.Mission) ? DisplayStyle.Flex : DisplayStyle.None;
+
+        MenuTitle.text = (menu == MenuModel.MenuType.Home) ? "MAIN MENU" : "MISSION SELECTION";
     }
 }

@@ -11,9 +11,9 @@ namespace BabuDriver.TriggerSystem
             {
                 GameEventManager.TriggerEvent("WarehouseEntered", this.gameObject);
             }
-            else if (other.CompareTag("BuyerBlip"))
+            if (other.CompareTag("BuyerBlip"))
             {
-                GameEventManager.TriggerEvent("DeleverProduct", this.gameObject);
+                GameEventManager.TriggerEvent("DeliverProduct", this.gameObject);
             }
         }
         private void OnCollisionEnter(Collision collision)

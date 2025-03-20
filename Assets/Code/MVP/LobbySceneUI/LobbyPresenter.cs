@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LobbyPresenter
 {
@@ -12,7 +13,7 @@ public class LobbyPresenter
 
         _view.ToMissionMenuButton.clicked += () => ChangeMenu(MenuModel.MenuType.Mission);
         _view.BackToHomeFromMissionMenu.clicked += () => ChangeMenu(MenuModel.MenuType.Home);
-        _view.ToActualGameButton.clicked += () => Debug.Log("Call Mission manager");
+        _view.ToActualGameButton.clicked += () => SceneManager.LoadScene(1);
     }
 
     private void ChangeMenu(MenuModel.MenuType menu)

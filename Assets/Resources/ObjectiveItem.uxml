@@ -1,0 +1,6 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: space-between; align-self: stretch; align-content: auto; align-items: center;">
+        <engine:Label text="Sample Objective" name="ObjectiveDiscription" style="color: rgb(255, 255, 255); font-size: 30px;" />
+        <engine:VisualElement name="ObjectiveState" style="flex-grow: 0; background-color: rgb(255, 255, 255); width: 40px; height: 40px; border-top-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-bottom-left-radius: 30px;" />
+    </engine:VisualElement>
+</engine:UXML>
