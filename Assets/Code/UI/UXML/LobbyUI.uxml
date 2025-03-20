@@ -1,0 +1,27 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement style="flex-grow: 0; flex-shrink: 0; flex-direction: row; width: 100%; height: 117px; align-items: center; justify-content: space-between; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px;">
+        <engine:Button text="Exit" style="font-size: 50px;" />
+        <engine:Label text="MISSION SELECTION" name="MenuTitle" style="font-size: 50px;" />
+        <engine:Label text="100000" style="font-size: 50px; background-color: rgba(255, 255, 255, 0.53);" />
+    </engine:VisualElement>
+    <engine:VisualElement name="HomeMenu" style="flex-grow: 1; flex-direction: row; align-items: flex-end; justify-content: flex-end; display: flex;">
+        <engine:Button text="MISSIONS" name="ToMissionMenuBtn" style="font-size: 50px; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px;" />
+    </engine:VisualElement>
+    <engine:VisualElement name="MissionMenu" style="flex-grow: 1; display: none; flex-direction: column;">
+        <engine:VisualElement style="flex-grow: 1; flex-direction: row; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px;">
+            <engine:Button text="Button" style="flex-shrink: 1; flex-grow: 1;" />
+            <engine:Button text="Button" style="flex-shrink: 1; flex-grow: 1;" />
+            <engine:Button text="Button" style="flex-shrink: 1; flex-grow: 1;" />
+            <engine:Button text="Button" style="flex-shrink: 1; flex-grow: 1;" />
+            <engine:Button text="Button" style="flex-shrink: 1; flex-grow: 1;" />
+            <engine:Button text="Button" style="flex-shrink: 1; flex-grow: 1;" />
+        </engine:VisualElement>
+        <engine:VisualElement style="flex-grow: 0; flex-direction: row; height: 10%; justify-content: space-between; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px;">
+            <engine:Button text="Home" name="BackToHomeFromSettings" style="font-size: 50px; flex-grow: 0; flex-shrink: 0;" />
+            <engine:Button text="START" name="ToActualGame" style="font-size: 50px;" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+    <engine:VisualElement name="RewardsMenu" style="flex-grow: 1; display: none; flex-direction: row; align-items: flex-start; font-size: 50px;">
+        <engine:Button text="Home" name="BackToHomeFromRewards" />
+    </engine:VisualElement>
+</engine:UXML>
